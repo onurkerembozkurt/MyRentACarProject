@@ -24,33 +24,29 @@ namespace Business.Concrete
             }
             _carDal.Add(car);
             return new SuccessResult(Messages.Added);
-
-            
         }
-
         public IResult Delete(Car car)
         {
             _carDal.Delete(car);
             return new SuccessResult();
         }
-
         public IDataResult<List<Car>> GetAll()
         {
-            
             return new SuccessDataResult<List<Car>>(_carDal.GetAll());
-
         }
-
         public IDataResult<Car> GetById(int id)
         {
             return new SuccessDataResult<Car>(_carDal.GetById(c => c.CarId == id), Messages.Get);
         }
-
+        public IDataResult<List<CarDetailDto>> GetCarDetails()
+        {
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
+        }
         public IResult Update(Car car)
         {
             _carDal.Update(car);
             return new SuccessResult();
-
+            
         }
     }
 }
