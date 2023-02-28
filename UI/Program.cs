@@ -15,7 +15,42 @@ namespace Console
             BrandTest();
             ColorTest();
             CarTest();
+            UserTest();
+            CustomerTest();
+            RentalTest();
+        }
 
+        private static void RentalTest()
+        {
+            Rental rental = new Rental { Id = 1, CarId = 1, CustomerId = 1, RentDate = DateTime.Now, ReturnDate = DateTime.Now.AddDays(10) };
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            rentalManager.Add(rental);
+            foreach (var item in rentalManager.GetAll().Data)
+            {
+                System.Console.WriteLine(rentalManager.GetAll().Message);
+            }
+        }
+
+        private static void CustomerTest()
+        {
+            Customer customer = new Customer { Id = 1, UserId = 1, CompanyName = "Kerem Soft" };
+            CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
+            customerManager.Add(customer);
+            foreach (var item in customerManager.GetAll().Data)
+            {
+                System.Console.WriteLine(item.Id);
+            }
+        }
+
+        private static void UserTest()
+        {
+            User user = new User { Id = 1, FirstName = "Kerem", LastName = "Bozkurt", Email = "abc@gmail.com", Password = "123" };
+            UserManager userManager = new UserManager(new EfUserDal());
+            userManager.Add(user);
+            foreach (var item in userManager.GetAll().Data)
+            {
+                System.Console.WriteLine(item.FirstName);
+            }
         }
 
         private static void BrandTest()
