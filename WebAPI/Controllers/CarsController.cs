@@ -1,7 +1,9 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Business.ValidationRules.FluentValidation;
 using DataAccess.Concrete.EntityFramework;
 using Entity.Concrete;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -61,6 +63,13 @@ namespace WebAPI.Controllers
         [HttpPost("add")]
         public IActionResult Add(Car car)
         {
+            var context = new ValidationContext<Car>(car);
+            CarValidator carValidator = new CarValidator();
+            var validator = carValidator.Validate(context);
+            if (!validator.IsValid)
+            {
+                throw new ValidationException(validator.Errors);
+            }
             var result = _carService.Add(car);
             if (result.Success)
             {
