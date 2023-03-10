@@ -9,9 +9,6 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfRentalDal : EfEntityRepositoryBase<Rental, CarRentDatabaseContext>, IRentalDal
     {
-        public List<RentalDetailDto> GetRentalDetails()
-        {
-            return null;
-        }
+       
     }
 }
