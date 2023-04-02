@@ -5,6 +5,7 @@ using DataAccess.Concrete.InMemory;
 using Entity.Concrete;
 using System;
 using System.Collections.Generic;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Console
 {
@@ -12,12 +13,13 @@ namespace Console
     {
         static void Main(string[] args)
         {
-            BrandTest();
-            ColorTest();
-            CarTest();
-            UserTest();
-            CustomerTest();
-            RentalTest();
+            //BrandTest();
+            //ColorTest();
+            //CarTest();
+            //UserTest();
+            //CustomerTest();
+            //RentalTest();
+            
         }
 
         private static void RentalTest()

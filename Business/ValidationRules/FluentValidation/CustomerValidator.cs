@@ -1,10 +1,18 @@
-﻿using System;
+﻿using Entity.Concrete;
+using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    class CustomerValidator
+    public class CustomerValidator:AbstractValidator<Customer>
     {
+        public CustomerValidator()
+        {
+            RuleFor(cu => cu.Id).NotEmpty();
+            RuleFor(cu => cu.CompanyName).NotEmpty();
+            RuleFor(cu => cu.UserId).NotEmpty();
+        }
     }
 }

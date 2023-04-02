@@ -1,10 +1,17 @@
-﻿using System;
+﻿using Entity.Concrete;
+using FluentValidation;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.ValidationRules.FluentValidation
 {
-    class ColorValidator
+    public class ColorValidator:AbstractValidator<Color>
     {
+        public ColorValidator()
+        {
+            RuleFor(c => c.ColorId).NotEmpty();
+            RuleFor(c => c.ColorName).NotEmpty();
+        }
     }
 }

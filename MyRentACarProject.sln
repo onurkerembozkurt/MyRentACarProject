@@ -13,7 +13,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "UI\Console.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{5709AED4-8251-4E82-8B59-CB5BC92A2168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D1E720A2-3CE0-4A63-8EC8-AD388171EDC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{D1E720A2-3CE0-4A63-8EC8-AD388171EDC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{955B046C-D8B0-46E7-8C0D-962589374A6A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\1aab7244-805e-49a9-b593-17ff832cf874.jpg = ..\..\..\Desktop\1aab7244-805e-49a9-b593-17ff832cf874.jpg
+		..\..\..\Desktop\281b269c-4be1-4282-bdf1-732826210f87.jpg = ..\..\..\Desktop\281b269c-4be1-4282-bdf1-732826210f87.jpg
+		..\..\..\Desktop\381a97f9-d7ac-44ff-b352-648be9432139.jpg = ..\..\..\Desktop\381a97f9-d7ac-44ff-b352-648be9432139.jpg
+		..\..\..\Desktop\5443541b-eabc-4b83-b606-bce5d9b926d8.jpg = ..\..\..\Desktop\5443541b-eabc-4b83-b606-bce5d9b926d8.jpg
+		..\..\..\Desktop\7a657c3b-1fdb-439d-8287-830bd2d674c5.jpg = ..\..\..\Desktop\7a657c3b-1fdb-439d-8287-830bd2d674c5.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
